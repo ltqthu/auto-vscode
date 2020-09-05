@@ -3,8 +3,10 @@
 
 自动生成vscode配置文件，包括：
 ```
-
-
+c_cpp_properties.json
+launch.json
+settings.json
+tasks.json
 ```
 
 将脚本移至`/usr/local/bin`：
