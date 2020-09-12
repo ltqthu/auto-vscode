@@ -32,11 +32,10 @@ if [ "$TYPE" = "g++" ]; then
                 "/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1",
                 "/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include",
                 "/Library/Developer/CommandLineTools/usr/include",
-                "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include",
-                "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)"
+                "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include"
             ],
             "defines": [],
-            "compilerPath": "/bin/gcc",
+            "compilerPath": "/usr/bin/gcc",
             "cStandard": "c11",
             "cppStandard": "c++11",
             "intelliSenseMode": "gcc-x64"
