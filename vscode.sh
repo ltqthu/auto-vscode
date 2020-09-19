@@ -12,6 +12,7 @@ TYPE=$1
 
 filename=".vscode"
 
+## mac
 if [[ "$(uname)"=="Darwin" ]]; then
     echo "Mac"
     ##############################
@@ -147,7 +148,7 @@ EOF
                 "\${file}",
                 "-o",
                 "\${fileDirname}/\${fileBasenameNoExtension}",
-                "-lphtread",
+                "-lpthread",
                 "&&",
                 "clear",
                 "&&",
@@ -341,7 +342,7 @@ EOF
                 "\${file}",
                 "-o",
                 "\${fileDirname}/\${fileBasenameNoExtension}",
-                "-lphtread",
+                "-lpthread",
                 "&&",
                 "clear",
                 "&&",
