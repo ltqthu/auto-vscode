@@ -463,7 +463,7 @@ EOF
             "cwd": "\${workspaceFolder}",
             "environment": [],
             "externalConsole": false,
-            "MIMode": "lldb",
+            "MIMode": "gdb",
             "preLaunchTask": "C/C++: g++ build",
             "postDebugTask": "C/C++: g++ clean",
         }
@@ -655,7 +655,7 @@ EOF
             "cwd": "\${workspaceFolder}",
             "environment": [],
             "externalConsole": false,
-            "MIMode": "lldb",
+            "MIMode": "gdb",
             "preLaunchTask": "C/C++: g++ build",
             "postDebugTask": "C/C++: g++ clean",
         }
