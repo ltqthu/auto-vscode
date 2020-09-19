@@ -13,7 +13,7 @@ TYPE=$1
 filename=".vscode"
 
 ## mac
-if [[ "$(uname)"=="Darwin" ]]; then
+if [[ "$OSTYPE" == "darwin"* ]]; then
     echo "Mac"
     ##############################
     # g++
@@ -402,7 +402,7 @@ EOF
         fi
 
     fi
-elif [[ "$(expr substr $(uname -s) 1 5)"=="Linux" ]]; then
+elif [[ "$OSTYPE" == "linux-gnu" ]]; then
     echo "Linux"
 elif [[ "$(expr substr $(uname -s) 1 10)"=="MINGW32_NT" ]]; then
     echo "Windows"
