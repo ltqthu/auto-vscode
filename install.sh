@@ -1,2 +1,2 @@
 #!/bin/bash
-cp vscode.sh /usr/bin/
+sudo cp vscode.sh /usr/local/bin/
