@@ -9,3 +9,7 @@ elif [[ "$(expr substr $(uname -s) 1 10)"=="MINGW32_NT" ]]; then
 else
     echo "Others"
 fi
+
+echo basename $(pwd)
+CurrentFilename=${PWD##*/}
+echo $CurrentFilename
