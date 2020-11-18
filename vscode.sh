@@ -181,7 +181,7 @@ create_linux_cmake_launch_json() {
             "name": "cmake调试",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}/bin/\${fileBasenameNoExtension}",
+            "program": "\${fileDirname}/bin/\${fileBasenameNoExtension}",
             "args": [],
             "stopAtEntry": false,
             "cwd": "\${workspaceFolder}",
