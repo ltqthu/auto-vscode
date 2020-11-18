@@ -127,7 +127,7 @@ create_linux_gcc_launch_json() {
             "cwd": "\${workspaceFolder}",
             "environment": [],
             "externalConsole": false,
-            "MIMode": "lldb",
+            "MIMode": "gdb",
             "preLaunchTask": "C/C++: g++ build",
             "postDebugTask": "C/C++: g++ clean",
         }
@@ -151,7 +151,7 @@ create_mac_cmake_launch_json() {
             "name": "cmake调试",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}/bin/\${fileBasenameNoExtension}",
+            "program": "\${fileDirname}/bin/\${fileBasenameNoExtension}",
             "args": [],
             "stopAtEntry": false,
             "cwd": "\${workspaceFolder}",
@@ -318,7 +318,8 @@ create_mac_tasks_json() {
         {
             "type": "shell",
             "label": "C/C++: cmake build",
-            "command": "cd ./build; cmake ../; make; clear; ./../bin/$CurrentFilename; ",
+            // "command": "cd ./build; cmake ../; make; clear; ./../bin/$CurrentFilename; ",
+            "command": "cd ./build; cmake ..; make; ",
             "options": {
                 "cwd": "\${workspaceFolder}"
             },
@@ -337,8 +338,10 @@ create_mac_tasks_json() {
         {
             "type": "shell",
             "label": "C/C++: cmake clean",
-            "command": "rm",
+            "command": "\${fileDirname}/bin/\${fileBasenameNoExtension}",
             "args": [
+                "&&",
+                "rm",
                 "-rf",
                 "./build/*",
             ],
@@ -454,7 +457,7 @@ create_linux_tasks_json() {
         {
             "type": "shell",
             "label": "C/C++: cmake clean",
-            "command": "${fileDirname}/bin/${fileBasenameNoExtension}",
+            "command": "\${fileDirname}/bin/\${fileBasenameNoExtension}",
             "args": [
                 "&&",
                 "rm",
