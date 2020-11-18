@@ -187,7 +187,7 @@ create_linux_cmake_launch_json() {
             "cwd": "\${workspaceFolder}",
             "environment": [],
             "externalConsole": false,
-            "MIMode": "lldb",
+            "MIMode": "gdb",
             "preLaunchTask": "C/C++: cmake build",
             "postDebugTask": "C/C++: cmake clean",
         }
