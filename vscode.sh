@@ -434,7 +434,8 @@ create_linux_tasks_json() {
         {
             "type": "shell",
             "label": "C/C++: cmake build",
-            "command": "cd ./build; cmake ..; make; ./../bin/\${fileBasenameNoExtension}; ",
+            //"command": "cd ./build; cmake ..; make; ./../bin/\${fileBasenameNoExtension}; ",
+            "command": "cd ./build; cmake ..; make; ",
             "options": {
                 "cwd": "\${workspaceFolder}"
             },
@@ -453,8 +454,10 @@ create_linux_tasks_json() {
         {
             "type": "shell",
             "label": "C/C++: cmake clean",
-            "command": "rm",
+            "command": "${fileDirname}/bin/${fileBasenameNoExtension}",
             "args": [
+                "&&",
+                "rm",
                 "-rf",
                 "./build/*",
             ],
